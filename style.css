@@ -1,0 +1,1372 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #34353b;
+}
+
+header {
+  height: 100vh;
+  padding: 36px 100px;
+  background-image: url(gallery/photo.png);
+  background-position: 81%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 90%;
+  z-index: 99;
+}
+
+header nav img {
+  height: 56px;
+  width: 56px;
+  object-fit: contain;
+  filter: invert(70%) sepia(96%) saturate(558%) hue-rotate(359deg)
+    brightness(103%) contrast(106%);
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 0px 20px;
+}
+
+header nav ul li a {
+  font-family: "Merienda", sans-serif;
+  color: #98999a;
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+header nav ul li a:hover {
+  color: #fbfbfb;
+}
+
+header nav ul li .active {
+  color: #fbfbfb;
+}
+
+.landing {
+  display: flex;
+  height: 90vh;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing .intro h3 {
+  font-family: "Timmana", sans-serif;
+  color: #fbfbfb;
+  font-weight: 400;
+  font-size: 32px;
+  margin-left: 2.5vw;
+}
+
+.landing .intro h3 span {
+  font-family: "Merienda", sans-serif;
+  color: #fec86a;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.intro button {
+  font-family: "Playfair Display", sans-serif;
+  height: 50px;
+  width: 154px;
+  margin-top: 7.5vh;
+  margin-left: 10vw;
+  background-color: transparent;
+  border: 2px solid #fec86a;
+  border-radius: 8px;
+  color: #fec86a;
+  font-size: 19.5px;
+  font-weight: 700;
+  transition: all ease 0.5s;
+}
+
+.intro button:hover {
+  background-color: #fec86a;
+  color: #34353b;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 55vh;
+  position: relative;
+  left: 35px;
+}
+
+.socials .line {
+  background-color: #34353b;
+  height: 15vh;
+  width: 2.5px;
+}
+
+.socials i {
+  color: #fbfbfb;
+  font-size: 36px;
+}
+
+.socials a{
+  text-decoration: none;
+}
+
+.about {
+  height: 50vh;
+  width: 85vw;
+  padding: 100px;
+  position: relative;
+  left: 8%;
+}
+
+.about h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Merienda", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .description {
+  display: flex;
+  align-items: start;
+}
+
+.about .description p {
+  font-family: "Playfair Display", serif;
+  text-align: justify;
+  position: relative;
+  top: 20px;
+  color: #fbfbfb;
+  font-size: 20px;
+  line-height: 42px;
+}
+
+.about .description p span {
+  color: #fec86a;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+  position: relative;
+  top: 200px;
+}
+
+.skills h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Merienda", serif;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 3vh;
+}
+
+.cards a{
+  text-decoration: none;
+}
+
+.skill-card {
+  height: 20vw;
+  width: 20vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+
+.skill-card:hover {
+  background-color: #fec86a;
+}
+
+.skill-card img {
+  height: 7.5vw;
+  width: 7.5vw;
+  object-fit: contain;
+}
+
+.skill-card h2 {
+  font-family: "Merienda", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fbfbfb;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+  position: relative;
+  top: 200px;
+}
+
+.portfolio h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Merienda", serif;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card img {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  height: 30vw;
+  width: 30vw;
+  background-color: #34353ba2;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card .overlay h3 {
+  color: #fbfbfb;
+  font-size: 24px;
+  font-family: "Merienda", serif;
+}
+
+.portfolio-card .overlay p {
+  color: #fbfbfb;
+  font-size: 16px;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+}
+
+.portfolio-card .overlay button {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  height: 36px;
+  width: 108px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 15px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.portfolio-card .overlay:hover {
+  opacity: 1;
+}
+
+.portfolio button {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 650;
+  margin-top: 50px;
+  height: 48px;
+  width: 144px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.portfolio button:hover {
+  background-color: #cc9e4e;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: 200px;
+}
+
+.darker-div {
+  background-color: #34353a;
+  width: 100vw;
+  height: 10vh;
+}
+
+.experience h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  color: #fbfbfb;
+  font-size: 56px;
+  font-family: "Merienda", serif;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 10%;
+}
+
+.lighter-div {
+  background-color: #34353a;
+  width: 100vw;
+  /* height: 90vh; */
+  padding-top: 5vh;
+  padding-left: 7vh;
+  display: flex;
+  flex-direction: column;
+  gap: 220px;
+}
+
+.lighter-div .exp {
+  height: 30vh;
+  width: 73vw;
+  position: relative;
+  margin-left: 20vh;
+}
+
+.exp a{
+  text-decoration: none;
+}
+
+.exp h2 {
+  font-family: "Timmana", sans-serif;
+  color: #fbfbfb;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.exp h2::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  color: #fec86a;
+  background-color: #fec86a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7.5%;
+  left: -5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #fec86a;
+}
+
+.exp-desc::before {
+  content: "";
+  height: 344px;
+  width: 2.5px;
+  background-color: #fbfbfb;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: -5%;
+}
+.exp-desc h3 {
+  font-family: "Timmana", sans-serif;
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.exp-desc p {
+  font-family: "Playfair Display", serif;
+  color: #fbfbfb;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 42px;
+}
+
+.exp-desc p span{
+  color: #fec86a;
+}
+
+.contact-me {
+  width: 100vw;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 340px;
+}
+
+.contact-me h1 {
+  font-size: 56px;
+  color: #fbfbfb;
+  font-family: "Merienda", serif;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  gap: 70px;
+}
+
+.contact-card {
+  font-family: "Merienda", serif;
+  background-color: #fec86a;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  margin-top: 7.5vh;
+}
+
+.contact-card i{
+  position: relative;
+  top: 3.5px;
+}
+.contact-card p{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact a{
+  text-decoration: none;
+  color: #000;
+}
+
+::selection{
+  background-color: #eeb34e46;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1442px){
+  html,body{
+    overflow-x: hidden;
+  }
+  header {
+    padding: 3rem;
+    background-position: 92%;
+    background-size: 47%;
+    height: 100%;
+  }
+  .landing {
+      display: flex;
+      height: 110vh;
+      background-color: transparent;
+      align-items: center;
+      justify-content: space-between;
+  }
+  header nav ul li a{
+    font-size: 23px;
+  }
+  .intro button{
+    height: 58px;    
+    width: 174px;    
+    margin-top: 7.5vh;
+    font-size: 19.5px;    font-weight: 700;
+  }
+  .socials{
+    margin-top: 41vh;
+  }
+  .about {
+      height: 50vh;
+      width: 92vw;
+      padding: 100px;
+      position: relative;
+      left: 5%;
+      top: -10rem;
+  }
+  .about .description p {
+      font-family: "Playfair Display", serif;
+      text-align: justify;
+      position: relative;
+      top: 40px;
+      color: #fbfbfb;
+      font-size: 21px;
+      line-height: 50px;
+  }
+  .skills{
+    top: 90px;
+  }
+  .portfolio{
+    top: 130px;
+  }
+  .portfolio-card .overlay h3{
+    font-size: 25px;
+  }
+  .portfolio-card .overlay p{
+    font-size: 18px;
+  }
+  .portfolio button{
+    font-weight: 750;    margin-top: 50px;  
+    height: 50px;    
+    width: 150px;
+  }
+  .experience{
+    top: 150px;
+  }
+  .lighter-div{
+    gap: 15rem;
+  }
+  .exp-desc::before{
+    height: 405px;
+    top: 89.7%;
+  }
+  .exp-desc p{
+    line-height: 45px;
+  }
+  .contact-me{
+    top: 19rem;
+  }
+  .contact{
+    gap: 60px;
+  }
+  .contact-card{
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1025px){
+  header nav ul li a{
+    font-size: 18px;
+  }
+  .landing .intro h3{
+    font-size: 25px;
+  }
+  .landing .intro h3 span{
+    font-size: 3rem;
+  }
+  .socials {
+    margin-top: 36vh;
+  }
+  .socials i{
+    font-size: 27px;
+  }
+  .about .description p{
+    line-height: 42px;        font-size: 17px;
+  }
+  .skills{
+    top: 140px;
+  }
+  .cards{
+    column-gap: 4rem;
+  }
+  .portfolio-card .overlay h3{
+    font-size: 25px;        text-align: center;        position: relative;        
+    top: 10px;
+  }
+  .portfolio-card .overlay p {
+    font-size: 12px;
+  }
+  .portfolio-card .overlay button{
+    position: relative;    
+    top: -30px;
+  } 
+  .lighter-div {
+    gap: 26rem;
+  }
+  .exp-desc::before {
+    height: 495px;
+    top: 140.7%;
+  }
+  .contact-me {
+    top: 28rem;
+  }
+  .contact-card {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .contact-card p {
+      font-size: 17px;
+      font-weight: 500;
+  }
+}
+
+
+@media only screen and (max-width: 769px) {
+  html,body{
+    overflow-x: hidden;
+  }
+  header {
+    padding: 12px;
+    background-position: 90%;
+    background-size: 50%;
+    height: 100%;
+  }
+  header nav{
+    position: fixed;
+    top: 30px;
+  }
+  .landing .intro{
+    position: relative;
+    top: 15px;
+  }
+  .landing .intro h3 {
+      font-size: 18px;
+  }
+  .landing .intro h3 span {
+      font-size: 1.5rem;
+  }
+  .landing .intro button {
+    width: 140px;        
+    height: 50px;        
+    font-size: 17px;
+  }
+  .socials {
+      margin-top: 155px;
+      position: relative;
+      left: 0;
+  }
+  .socials i {
+      font-size: 20px;
+  }
+  .about{
+    height: 60vh;
+    position: relative;
+    top: -12.5rem;
+    width: 99vw;
+    left: -30px;
+    padding-right: 30px;
+  }
+  .about .description{
+    position: relative;
+    top: 0px;
+  }
+  .about h1 {
+      font-size: 28px;
+  }
+  .about .description p {
+      font-size: 14px;
+  }
+  .skills{
+    position: relative;
+    top: -2rem;
+  }
+  .skills h1 {
+      font-size: 28px;
+  }
+  
+  .skill-card {
+      width: 170px;
+      height: 170px;
+  }
+  .skill-card img {
+      width: 40px;
+      height: 40px;
+  }
+  .skill-card h2 {
+      font-size: 16px;
+  }
+  .cards{
+    gap: 4.5vh;
+  }
+  .portfolio{
+    position: relative;
+    top: -3rem;
+  }
+  .portfolio-cards{
+    margin-top: 55px;
+  }
+  .portfolio h1 {
+      font-size: 28px;
+  }
+  .portfolio-card .overlay{
+    gap: 1.5vh;
+  }
+  .portfolio-card .overlay h3 {
+      font-size: 14px;
+      position: relative;
+      top: 28px;
+  }
+  .portfolio-card .overlay p {
+      font-size: 10px;
+      position: relative;
+      top: 28px;
+  }
+  .portfolio-card .overlay button{
+    height: 25px;
+    width: 89px;
+    font-size: 12px;
+  }
+  .overlay a{
+    position: relative;
+    top: 7px;
+  }
+  .experience{
+    position: relative;
+    top: -3.5rem;
+  }
+  .lighter-div .exp{
+    margin-left: 12vh;
+  }
+  .experience h1 {
+      font-size: 28px;
+  }
+  .exp h2 {
+      font-size: 20px;
+  }
+  .exp-desc::before {
+    content: "";
+    height: 460px;
+    width: 2.5px;
+    background-color: #fbfbfb;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 132%;
+    left: -5%;
+  }
+  .exp-desc h3 {
+      font-size: 16px;
+  }
+  .exp-desc p {
+      font-size: 12px;
+  }
+  .contact-me{
+    position: relative;
+    top: 12rem;
+  }
+  .contact{
+    width: 95vw;
+    position: relative;
+    display: grid;        grid-template-columns: auto auto;
+    left: 50px;
+    column-gap: 2px;        row-gap: 10px;
+  }
+  .contact #endloc{
+    position: relative;
+    left: 11rem;
+  }
+  .contact #endloc .contact-card{
+    justify-content: center;
+  }
+  .contact-me h1 {
+      font-size: 28px;
+  }
+  .contact-card {
+    padding: 10px;
+    font-size: 18px;
+    width: 35vw;
+  }
+  .contact-card p {
+      font-size: 16px;
+      font-weight: 500;
+  }
+  .contact-card i {
+      font-size: 20px;
+  }
+  .social-icons a {
+      font-size: 20px;
+  }
+}
+
+
+
+@media only screen and (max-width: 426px) {
+  html,body{
+    overflow-x: hidden;
+  }
+  header {
+    padding: 12px;
+    background-position: 90%;
+    background-size: 40%;
+    height: 100%;
+    position: relative;
+    top: -90px;
+  }
+  header nav{
+    position: fixed;
+    top: 30px;
+  }
+  .landing{
+    height: 85vh;
+  }
+  .landing .intro h3 {
+      font-size: 11.5px;
+      line-height: 25px;
+  }
+  .landing .intro h3 span {
+      font-size: 1rem;
+  }
+  .landing .intro button {
+    width: 110px;        
+    font-size: 12px;        
+    height: 35px;        margin-top: 1rem;
+  }
+  .socials {
+    margin-top: -10px;
+    position: relative;
+    gap: 1.5px;
+    left: 4px;
+  }
+  .socials i {
+      font-size: 12px;
+  }
+  .about{
+    height: 90vh;
+    position: relative;
+    top: -21rem;
+    width: 105vw;
+    left: -60px;
+    padding-right: 0px;
+  }
+  .about .description{
+    position: relative;
+    top: -5px;
+    line-height: 25px;
+  }
+  .about h1 {
+      font-size: 28px;
+  }
+  .about .description p {
+      font-size: 11.5px;
+      line-height: 36px;
+  }
+  .skills{
+    position: relative;
+    top: -17rem;
+  }
+  .skills h1 {
+      font-size: 28px;
+  }
+  .cards{
+    display: flex;
+  }
+  .skill-card {
+    width: 290px;
+    height: 220px;
+  }
+  .skill-card img {
+      width: 90px;
+      height: 90px;
+  }
+  .skill-card h2 {
+      font-size: 16px;
+  }
+  .portfolio{
+    position: relative;
+    top: -18rem;
+  }
+  .portfolio-cards{
+    margin-top: 55px;
+    gap: 2.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .portfolio-card .overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    height: 50vw;
+    width: 50vw;
+    background-color: #34353ba2;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transition: all ease 0.5s;
+  }
+  .portfolio-card .overlay button{
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 600;
+      height: 25px;
+      width: 95px;
+      background-color: #fec86a;
+      border: 1px solid #fec86a;
+      border-radius: 8px;
+      color: #34353b;
+      font-size: 12px;
+      transition: all ease 0.5s;
+      cursor: pointer;
+  }
+  .portfolio-card .overlay:hover {
+    opacity: 1;
+    gap: 0vh;
+    row-gap: 2rem;
+  }
+  .portfolio-card{
+    height: 40vw;
+    width: 40vw;
+  }
+  .portfolio-card img {
+    position: relative;
+    height: 40vw;
+    width: 40vw;
+    object-fit: cover;
+  } 
+  .portfolio h1 {
+      font-size: 28px;
+  }
+  .portfolio-card .overlay h3 {
+      font-size: 12px;
+      position: relative;
+      top: 2px;
+  }
+  .overlay a{
+    position: relative;        
+    top: -2px;
+  }
+  .portfolio-card .overlay p {
+    font-size: 5px;
+    display: none;
+  }
+  .experience{
+    position: relative;
+    top: -19rem;
+  }
+  .lighter-div {
+    background-color: #34353a;
+    width: 100vw;
+    padding-top: 5vh;
+    position: relative;
+    left: -27px;
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+  }
+  .lighter-div .exp{
+    margin-left: 7.5vh;
+  }
+  .experience h1 {
+      font-size: 28px;
+      position: relative;
+      left: 6rem;
+  }
+  .exp h2 {
+      font-size: 20px;
+  }
+  .exp-desc::before {
+    content: "";
+    height: 400px;
+    width: 2.5px;
+    background-color: #fbfbfb;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 116.5%;
+    left: -5%;
+  }
+  .exp-desc h3 {
+      font-size: 16px;
+  }
+  .exp-desc p {
+      font-size: 12px;
+      line-height: 22px;
+      text-align: justify;
+  }
+  .contact-me{
+    position: relative;
+      top: 0.5rem;
+      margin-bottom: 5rem;
+      padding: 0;
+  }
+  .contact{
+    width: 95vw;
+    position: relative;
+    left: 80px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0;
+  }
+  .contact-me h1 {
+      font-size: 28px;
+  }
+  .contact-card{
+    padding: 10px;
+    gap: 15px;
+    width: 15rem;
+    position: relative;
+    left: 1rem;
+  }
+  .contact-card i {
+      font-size: 20px;
+  }
+  .contact-card p{
+    font-size: 16px;
+  }
+  .social-icons a {
+      font-size: 20px;
+  }
+  .contact #endloc{
+    position: relative;
+    left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 380px){
+  header nav ul{
+    font-size: 12px;
+  }
+  header{
+    background-size: 40%;
+  }
+  .landing{
+    height: 80vh;
+  }
+  .landing .intro h3{
+    font-size: 10px;        line-height: 20px;
+  }
+  .landing .intro button {
+    width: 100px;
+    font-size: 10px;
+    height: 30px;
+  }.socials {
+    margin-top: -22px;
+    position: relative;
+    gap: 0.5px;
+    left: 4px;
+  }
+  .socials i {
+    font-size: 11px;
+  }
+  .about {
+    top: -21rem;
+  }
+  .about .description {
+    position: relative;
+    top: 0px;
+    line-height: 25px;
+    width: 85vw;
+    left: -15px;
+  }
+  .about .description p {
+    font-size: 11px;
+  }
+  .skills {
+    top: -15rem;
+  }
+  .skill-card {
+    width: 200px;
+    height: 200px;
+  }
+  .skills h1 {
+    font-size: 28px;
+    width: 55vw;
+    position: relative;
+    left: 16px;
+  }
+  .portfolio {
+    top: -17rem;
+  }
+  .portfolio-cards{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .portfolio-card{
+    height: 55vw;        
+    width: 55vw;    
+  }
+  .portfolio-card img{
+    height: 55vw;        
+    width: 55vw;
+  }
+  .portfolio-card .overlay{
+    height: 56vw;        
+    width: 56vw;
+  }
+  .portfolio-card .overlay h3{
+    position: relative;
+    top: 9px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .portfolio-card .overlay #ana{
+    top: -15px;
+  }
+  .overlay a{
+    position: relative;
+    top: -5px;
+  }
+  .experience {
+    top: -17rem;
+  }
+  .lighter-div {
+    gap: 21.5rem;
+    position: relative;        left: -2.5rem;
+  }
+  .lighter-div .exp{
+    width: 77vw;
+  }
+  .exp h2::before{
+    top: 6.5%;  
+    left: -7%;
+  }
+  .exp-desc::before {
+    top: 130.5%;
+    height: 460px;
+    left: -7%;
+  }
+  .contact-me {
+    top: 5rem;
+  }
+  .contact {
+    position: relative;
+    left: 55px;
+  }
+}
+
+
+
+@media only screen and (max-width: 357px){
+  header nav ul li a {
+    font-size: 15px;
+  }
+  .socials{
+    margin-top: -30px;
+  }
+  .skills {
+    top: -12rem;
+  }
+  .portfolio {
+    top: -13rem;
+  }
+  .experience {
+    top: -14rem;
+  }
+  .lighter-div{
+    position: relative;
+    left: -2.8rem;
+  }
+  .contact-me {
+    top: 5rem;
+    height: 65vh;
+  }
+  .contact {
+    position: relative;
+    left: 37px;
+  }
+}
+
+
+@media only screen and (max-width: 348px){
+  header nav ul li a {
+    font-size: 15px;
+  }
+  .socials{
+    margin-top: -34px;
+    gap: 0;
+  }    
+  .landing .intro h3{
+    font-size: 9.7px;
+  }
+  .skills {
+    top: -12rem;
+  }
+  .portfolio {
+    top: -12rem;
+  }    
+  .experience {
+    top: -12rem;
+  }
+  .exp-desc::before {
+    top: 135.5%;
+    height: 480px;
+    left: -7%;
+  }
+  .lighter-div{
+    gap: 22.5rem;
+  }
+  .contact-me {
+    top: 9rem;
+  }    
+  .contact-card{
+    left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 321px){
+  header{
+    background-position: 92%;
+  }
+  .landing .intro h3 {
+      font-size: 9px;
+      line-height: 25px;
+      position: relative;        top: -5px;
+    }
+    header nav ul li a {
+      font-size: 14px;
+    }
+  .landing .intro button {
+    width: 92px;
+    font-size: 10px;
+    height: 25px;
+  }
+  .intro a{
+    position: relative;   
+    top: -11px;
+  }
+  .socials{
+    gap: 0px;
+    margin-top: -42px;      
+    left: 7px;
+  }
+  .socials i {
+    font-size: 9px;
+  }
+  .about{
+    top: -21rem;
+  }
+  .about .description p {
+    font-size: 9.5px;
+    line-height: 25px;
+  }
+  .skills {
+    top: -23rem;
+  }
+  .skill-card {
+    width: 160px;
+    height: 160px;
+  }
+  .skill-card img {
+    width: 70px;
+    height: 70px;
+  }
+  .portfolio {
+    top: -23rem;
+  }
+  .portfolio-cards{
+    display: grid;        grid-template-columns: auto;
+  }
+  .portfolio-card {
+    height: 70vw;
+    width: 70vw;
+  }
+  .portfolio-card img{
+    height: 70vw;      
+    width: 70vw;
+  }
+  .portfolio-card .overlay h3 {
+    position: relative;
+    top: 0px;
+    font-size: 15px;
+  }
+  .portfolio-card .overlay{
+    height: 75vw;
+    width: 75vw;
+  }
+  .experience {
+    top: -23rem;
+  }
+  .lighter-div {
+    gap: 28rem;
+  }
+  .exp-desc::before {
+    top: 156.5%;
+    height: 560px;
+    left: -7%;
+  }
+  .contact-me {
+    top: 4rem;
+  }
+  .contact {
+    position: relative;
+    left: 25px;
+  }
+  .contact-card {
+    gap: 15px;
+    width: 12rem;
+    position: relative;
+    left: 2.6rem;
+  }    
+  .contact #endloc{
+    position: relative;
+    left: 0;
+  }
+}
+
+
+
